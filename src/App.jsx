@@ -1,6 +1,9 @@
 import { useQuery } from 'convex/react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { api } from "../convex/_generated/api";
+
+// Pages
+
 import './App.css'
 
 function App() {
@@ -9,8 +12,10 @@ function App() {
     // Add the page components here as created
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={} />
-        <Route path="/home" element={}>
+        <Route path="/" element={}>
+          <Route path="/signin" element={} />
+        </Route>
+        <Route path="/home" element={<Home />}>
           <Route path="/home/isbn:" element={} />
         </Route>
         <Route path="/user" element={}>
