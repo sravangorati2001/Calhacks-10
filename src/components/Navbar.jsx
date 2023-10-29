@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./Navbar.css"
 
 const Navbar = (props) => {
@@ -5,13 +6,14 @@ const Navbar = (props) => {
         <div className="nav-bar">
             <div className="name-container">
                 <img 
-                    src="../../public/logo.png" 
+                    src="/logo.png" 
                     alt="EduCycle logo"
                     className="nav-logo"/>
                 <p className="title">EduCycle</p>
             </div>
+            {props.searchBar ? props.searchBar : null}
             <img 
-                src="../../public/placeholder.svg" 
+                src="/placeholder.svg" 
                 alt="Female Avatar"
                 className="profile-pic" />
         </div>
