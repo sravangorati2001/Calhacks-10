@@ -1,17 +1,19 @@
-import "./Navbar.css"
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-const Navbar = (props) => {
+
+const Navbar = () => {
     return (
         <div className="nav-bar">
-            <div className="name-container">
+            <Link to="/" className="name-container">
                 <img 
-                    src="../../public/logo.png" 
+                    src="/logo.png" 
                     alt="EduCycle logo"
                     className="nav-logo"/>
                 <p className="title">EduCycle</p>
-            </div>
+            </Link>
             <img 
-                src="../../public/placeholder.svg" 
+                src="/placeholder.svg" 
                 alt="Female Avatar"
                 className="profile-pic" />
         </div>

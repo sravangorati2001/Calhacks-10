@@ -1,0 +1,17 @@
+.home-body {
+    display: flex;
+}
+
+.filter-container {
+    width: 20%;
+}
+
+#create-new-listing {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 10px 17px;
+    font-family: inherit;
+    font-size: 24px;
+}
