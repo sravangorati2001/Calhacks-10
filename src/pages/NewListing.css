@@ -1,9 +1,18 @@
-.form-div {
-    display: flex;
-    flex-direction: column;
+.listing-body {
     width: fit-content;
+    align-self: center;
+    padding: 30px 0;
 }
 
-.form-lable {
-    color: black;
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-div {
+    margin: 10px;
+}
+
+.select {
+    color: white !important;
 }
