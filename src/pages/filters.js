@@ -1,4 +1,4 @@
-{
+const filters = `{
     "subject": [
         "Accounting",
         "Anthropology",
@@ -45,4 +45,6 @@
             "val": 50
         }
     ]
-}
+}`;
+
+export default filters;
