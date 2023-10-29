@@ -1,10 +1,23 @@
+import SearchBar from "../components/SearchBar";
+import { useState } from "react";
+
 import Navbar from "../components/Navbar";
 
 const Home = () => {
+    
     return (
         <>
-            <Navbar />
-            Home
+            <Navbar 
+                searchBar={<SearchBar />}/>
+
+            <div className="home-body">
+                <div className="filter-container">
+
+                </div>
+                <div className="card-container">
+
+                </div>
+            </div>
         </>
     );
 }
