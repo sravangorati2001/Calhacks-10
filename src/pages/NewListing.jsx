@@ -1,23 +1,12 @@
+/* eslint-disable react/prop-types */
 import TextInput from "../components/TextInput";
 import FILTERS from "./filters";
 
-import { useState } from "react";
 import "./form.css";
 import "./NewListing.css";
-const NewListing = () => {
+const NewListing = (props) => {
     const filters = JSON.parse(FILTERS);
     
-    const [bookInfo, setBookInfo] = useState({
-        bookName: '',
-        isbn: 0,
-        condition: "",
-        course: "",
-        subject: "",
-        professor: "",
-        description: "",
-    });
-
-
     return (
         <>
             {/* <Navbar /> */}
@@ -69,7 +58,11 @@ const NewListing = () => {
                     placeholder="Add any notes here"
                     id="desc" />
 
-                <input type="submit" name="addListing" className="submit-add-listing form-text" />
+                <input 
+                    type="submit" 
+                    name="addListing" 
+                    className="submit-add-listing form-text"
+                    onSubmit={(e) => {props.handleSubmit(e)}} />
             </form>
         </>
     );

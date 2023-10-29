@@ -1,6 +1,4 @@
-// import { useQuery } from 'convex/react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import { api } from "../convex/_generated/api";
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 // Pages
 import Home from './pages/Home';
@@ -10,24 +8,32 @@ import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
+  const nav = useNavigate();
+
+  const handleFormSubmit = (e) => {
+    updateListings();
+    nav("/");
+  }
+
+  const updateListings = () => {
+
+  }
 
   return (
     <>
       {/* Add the page components here as created */}
-      <BrowserRouter>
         <Navbar  />
         <Routes>
           <Route path="/" element={<Home />}>
             {/* <Route path="/home/key:" element={<Listing />} /> */}
           </Route>
           {/* Temp Routes*/}
-          <Route path="/newListing" element={<NewListing />} />
+          <Route path="/newListing" element={<NewListing handleSubmit={handleFormSubmit}/>} />
           {/* <Route path="/user" element={}>
             <Route path="/user/settings" element={} />
             <Route path="/user/listing" element={} />
           </Route> */}
         </Routes>
-      </BrowserRouter>
     </>
   );
 }

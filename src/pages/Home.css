@@ -10,6 +10,21 @@
   flex-wrap: wrap;
 }
 
+.no-listings {
+  border: #3E7E4A dashed 5px;
+  color: #3E7E4A;
+  width: 80%;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    color: #3E7E4A;
+    background-color: #edfaf0;
+  }
+}
+
 .filter-container {
     width: 15%;
     display: flex;

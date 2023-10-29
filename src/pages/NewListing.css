@@ -20,7 +20,7 @@
 }
 
 .select {
-    color: #757575 !important;
+    /* color: black !important; */
     width: 36.5vw;
 }
 
@@ -37,7 +37,7 @@
 .submit-add-listing {
     margin: 30px 0;
     width: 82vw;
-    color: white;
+    color: white !important;
     font-weight: bold;
     text-transform: uppercase;
     background-color: #3E7E4A;

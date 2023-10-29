@@ -12,6 +12,17 @@ import "./Home.css";
 const filters = JSON.parse(FILTERS);
 
 const Home = (props) => {
+    const NoListing = () => {
+        return (
+            <Link to="/newListing" className="no-listings">
+                <p className="no-listings-text">
+                    There are no listings.
+                    <br />
+                    Create a new listing
+                </p>
+            </Link>
+        );
+    }
 
     return (
         <>
@@ -35,8 +46,9 @@ const Home = (props) => {
                         label="Price"/>
                     
                 </div>
+
                 <div className="card-container">
-                    {props.cards ? props.cards.map((card, index) => {
+                    {props.cards && props.cards !== 0 ? props.cards.map((card, index) => {
                         return (
                             <Listing 
                                 key={index}
@@ -44,9 +56,7 @@ const Home = (props) => {
                                 isbn={card.isbn}
                                 condition={card.condition}
                                 price={card.price}/>
-                    )}) : null}
-                    <Listing />
-                    <Listing />
+                    )}) : <NoListing />}
 
                     <Link to="/newListing">
                         <button className="circular" id="create-new-listing">+</button>

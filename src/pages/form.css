@@ -9,8 +9,7 @@
 }
 
 .form-text {
-    color: black;
-    color: #000;
+    color: black !important;
     font-family: Inter;
     font-size: 20px;
     padding: 10px;
