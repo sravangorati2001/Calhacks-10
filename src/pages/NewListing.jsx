@@ -17,11 +17,11 @@ const NewListing = () => {
         <>
             <Navbar />
             <div className="listing-body">
-                <TextInput 
+                {/* <TextInput 
                     inputLabel="Textbook Name"
                     placeholder=""
                     handleChange={}
-                />
+                /> */}
             </div>
         </>
     );

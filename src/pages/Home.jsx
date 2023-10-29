@@ -7,10 +7,6 @@ const Home = () => {
 
     return (
         <>
-<<<<<<< HEAD
-            <Navbar />
-            
-=======
             <Navbar 
                 searchBar={<SearchBar />}/>
 
@@ -22,7 +18,6 @@ const Home = () => {
 
                 </div>
             </div>
->>>>>>> 3ec6d2b78c5dec638c2d8063819dee046cf4b4db
         </>
     );
 }
