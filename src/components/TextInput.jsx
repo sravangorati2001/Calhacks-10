@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
 const TextInput = (props) => {
     return (
-        <div className="input-div">
-            <label htmlFor="input-field" className="text-input-label">{props.inputLable}</label>
+        <div className="form-div">
+            <label htmlFor={`input-field-${props.val}`} className="text-input-label form-lable">{props.inputLable}</label>
             <input 
                 type="text" 
-                id="input-field"
+                id={`input-field-${props.val}`}
                 className="text-input"
-                placeholder={props.placeholder}
-                onChange={(e) => {props.handleChange(e)}} />
+                placeholder={props.placeholder} />
         </div>
     );
 }

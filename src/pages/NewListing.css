@@ -1,0 +1,9 @@
+.form-div {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.form-lable {
+    color: black;
+}
