@@ -1,15 +1,17 @@
+/* eslint-disable react/prop-types */
 // import SearchBar from "../components/SearchBar";
 // import { useState } from "react";
 
 import { Link } from "react-router-dom";
 import Checkboxes from "../components/Checkboxes";
+import Listing from "../components/Listing";
 import FILTERS from "./filters";
 
 import "./Home.css";
 
 const filters = JSON.parse(FILTERS);
 
-const Home = () => {
+const Home = (props) => {
 
     return (
         <>
@@ -34,6 +36,18 @@ const Home = () => {
                     
                 </div>
                 <div className="card-container">
+                    {props.cards ? props.cards.map((card, index) => {
+                        return (
+                            <Listing 
+                                key={index}
+                                bookName={card.bookName}
+                                isbn={card.isbn}
+                                condition={card.condition}
+                                price={card.price}/>
+                    )}) : null}
+                    <Listing />
+                    <Listing />
+
                     <Link to="/newListing">
                         <button className="circular" id="create-new-listing">+</button>
                     </Link>

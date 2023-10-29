@@ -35,7 +35,7 @@
 }
 
 .submit-add-listing {
-    margin-top: 30px;
+    margin: 30px 0;
     width: 82vw;
     color: white;
     font-weight: bold;
@@ -45,4 +45,8 @@
     border: none;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
 
+}
+
+.page-title {
+    font-size: 46px;
 }
