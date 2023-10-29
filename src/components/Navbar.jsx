@@ -1,17 +1,17 @@
-/* eslint-disable react/prop-types */
-import "./Navbar.css"
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-const Navbar = (props) => {
+
+const Navbar = () => {
     return (
         <div className="nav-bar">
-            <div className="name-container">
+            <Link to="/" className="name-container">
                 <img 
                     src="/logo.png" 
                     alt="EduCycle logo"
                     className="nav-logo"/>
                 <p className="title">EduCycle</p>
-            </div>
-            {props.searchBar ? props.searchBar : null}
+            </Link>
             <img 
                 src="/placeholder.svg" 
                 alt="Female Avatar"

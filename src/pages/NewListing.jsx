@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import TextInput from "../components/TextInput";
 import FILTERS from "./filters"
 
@@ -21,7 +20,7 @@ const NewListing = () => {
 
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <h1 className="page-title">Create a New Listing</h1>
             <form className="addListingForm">
                 <div className="row">
