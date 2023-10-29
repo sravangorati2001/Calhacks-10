@@ -36,14 +36,8 @@ const filters = `{
     ],
 
     "price": [
-        {
-            "str-rep": "$100 and under", 
-            "val": 100
-        },
-        {
-            "str-rep": "$50 and under", 
-            "val": 50
-        }
+            "$100 and under", 
+            "$50 and under"
     ]
 }`;
 

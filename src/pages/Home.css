@@ -3,11 +3,24 @@
 }
 
 .filter-container {
-    width: 20%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid #774307;
+}
+
+.filter-div {
+    margin: 10px 0;
+    text-align: start;
+}
+
+.sideNav-label {
+    font-weight: bold;
 }
 
 #create-new-listing {
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     right: 10px;
     border-radius: 50%;

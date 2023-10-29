@@ -1,5 +1,5 @@
 import TextInput from "../components/TextInput";
-import FILTERS from "./filters"
+import FILTERS from "./filters";
 
 import { useState } from "react";
 import "./form.css";
