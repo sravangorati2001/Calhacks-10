@@ -3,8 +3,9 @@ import Navbar from "../components/Navbar";
 const UserSettings = () => {
     return (
         <>  
+            <Navbar />
             <div>
-                <Navbar />
+                
             </div>
             
         </>

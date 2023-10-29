@@ -34,6 +34,7 @@ function App() {
           {/* Temp Routes*/}
           <Route path="/landing" element={<Landing />} />
           <Route path="/newListing" element={<NewListing />} />
+          <Route path="/userSettings" element={<UserSettings />} />
           {/* <Route path="/user" element={}>
             <Route path="/user/settings" element={} />
             <Route path="/user/listing" element={} />
