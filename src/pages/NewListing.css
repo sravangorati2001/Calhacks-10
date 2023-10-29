@@ -1,7 +1,13 @@
-.listing-body {
+.addListingForm {
     width: fit-content;
     align-self: center;
-    padding: 30px 0;
+    /* padding: 30px 0; */
+}
+
+.page-title {
+    margin: 30px 0 0 0;
+    padding-left: 7vw;
+    text-align: start;
 }
 
 #root {
@@ -14,5 +20,29 @@
 }
 
 .select {
-    color: white !important;
+    color: #757575 !important;
+    width: 36.5vw;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#input-field-desc {
+    width: 80vw;
+    height: 20vh;
+}
+
+.submit-add-listing {
+    margin-top: 30px;
+    width: 82vw;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #3E7E4A;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+
 }
