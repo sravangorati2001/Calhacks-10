@@ -1,35 +1,53 @@
-// import { useQuery } from 'convex/react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-// import { api } from "../convex/_generated/api";
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 // Pages
 import Home from './pages/Home';
-import Landing from './pages/Landing';
 import NewListing from './pages/NewListing';
 import Navbar from './components/Navbar';
 
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const nav = useNavigate();
+
+  const [listing, setListing] = useState([]);
+
+  const handleFormSubmit = (e) => {
+    updateListings();
+    nav("/");
+  }
+
+  const updateListings = () => {
+    const newListing = {
+      bookName: '',
+      isbn: '',
+      condition: '',
+      price: '',
+      imgSrc: ''
+    };
+
+    setListing((prevListing) => [
+      ...prevListing,
+      newListing
+    ])
+  }
 
   return (
     <>
       {/* Add the page components here as created */}
-      <BrowserRouter>
         <Navbar  />
         <Routes>
-          <Route path="/" element={<Home />}>
+          <Route path="/" element={<Home cards={listing}/>}>
             {/* <Route path="/home/key:" element={<Listing />} /> */}
           </Route>
           {/* Temp Routes*/}
-          <Route path="/landing" element={<Landing />} />
-          <Route path="/newListing" element={<NewListing />} />
+          <Route path="/newListing" element={<NewListing handleSubmit={handleFormSubmit}/>} />
           {/* <Route path="/user" element={}>
             <Route path="/user/settings" element={} />
             <Route path="/user/listing" element={} />
           </Route> */}
         </Routes>
-      </BrowserRouter>
     </>
   );
 }
