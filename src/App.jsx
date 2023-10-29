@@ -9,13 +9,22 @@ import Landing from './pages/Landing';
 import './App.css'
 
 function App() {
+  const Temp = () => {
+    return (
+      <>
+        <Link to="/home">Home</Link>
+        <Link to="/landing">Landing</Link>
+      </>
+    );
+  }
+
   return (
     <>
-      {/* temp links to different pages for development */}
       {/* Add the page components here as created */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Temp />} />
+          <Route path="/landing" element={<Landing />} />
           <Route path="/home" element={<Home />}>
             {/* <Route path="/home/isbn:" element={} /> */}
           </Route>

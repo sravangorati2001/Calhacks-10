@@ -1,0 +1,32 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFF8E1;
+    /* width: 100vw; */
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav-logo {
+    width: 90px;
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    height: 65px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.title {
+    color: #774307;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
