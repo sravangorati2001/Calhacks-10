@@ -6,9 +6,12 @@ import NewListing from './pages/NewListing';
 import Navbar from './components/Navbar';
 
 import './App.css';
+import { useState } from 'react';
 
 function App() {
   const nav = useNavigate();
+
+  const [listing, setListing] = useState([]);
 
   const handleFormSubmit = (e) => {
     updateListings();
@@ -16,7 +19,18 @@ function App() {
   }
 
   const updateListings = () => {
+    const newListing = {
+      bookName: '',
+      isbn: '',
+      condition: '',
+      price: '',
+      imgSrc: ''
+    };
 
+    setListing((prevListing) => [
+      ...prevListing,
+      newListing
+    ])
   }
 
   return (
@@ -24,7 +38,7 @@ function App() {
       {/* Add the page components here as created */}
         <Navbar  />
         <Routes>
-          <Route path="/" element={<Home />}>
+          <Route path="/" element={<Home cards={listing}/>}>
             {/* <Route path="/home/key:" element={<Listing />} /> */}
           </Route>
           {/* Temp Routes*/}
