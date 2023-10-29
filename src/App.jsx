@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 // Pages
 import Home from './pages/Home';
 import Landing from './pages/Landing';
+import UserSettings from './pages/UserSettings';
 
 import './App.css'
 
@@ -14,6 +15,7 @@ function App() {
       <>
         <Link to="/home">Home</Link>
         <Link to="/landing">Landing</Link>
+        <Link to="/userSettings">UserSettings</Link>
       </>
     );
   }
@@ -25,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Temp />} />
           <Route path="/landing" element={<Landing />} />
+          <Route path="/userSettings" element={<UserSettings />} />
           <Route path="/home" element={<Home />}>
             {/* <Route path="/home/isbn:" element={} /> */}
           </Route>
